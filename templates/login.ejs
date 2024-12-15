@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+
+</head>
+
+<body>
+        <!-- Joke section -->
+        <div id="jokeSection">
+            <h2>Here is a randomly generated joke just for you!</h2>
+            <p><%= joke %></p>
+        </div>
+    <img id="homeImage" src="/images/nelson.png" alt="nelson">
+    <div class="container">
+        <div id="titlehead">
+            <h1>LOGIN</h1>
+        </div>
+
+        <form action="/login" method="post">
+            <table>
+                <tr>
+                    <td>Enter Email:</td>
+                    <td><input type="text" name="name" id="name" placeholder="someone@something.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input type="password" name="password" id="password" placeholder="password" required></td>
+                </tr>
+                
+            </table>
+            <span style="color: red;"><%= error %></span>
+            <div id="formButtons">
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Login"></td>
+                        <td><button type="button" onclick="document.location.href='/new'">Register</button></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    </form>
+    
+    <div class="centered" id="introText">
+        <p>
+            Welcome to Nelson Clicker! To play the game, please log into your account below. If you do not
+            have an account, create one <a href="/new">here</a>. We will store your account information inside a
+            MongoDB collection along with your score.
+        </p>
+    </div>
+</body>
+
+</html>

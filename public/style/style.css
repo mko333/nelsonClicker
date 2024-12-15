@@ -1,0 +1,126 @@
+#grad {
+    background-image: linear-gradient(to bottom, rgb(45, 45, 45), rgb(100, 100, 100))
+}
+
+body {
+    font-family: "Comic Sans MS", "Comic Sans", Geneva, Verdana, sans-serif;
+    color: rgb(45, 45, 45);
+    background: whitesmoke;
+    margin: 0px;
+}
+
+h5 {
+    color: crimson;
+    text-align: center;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#introText {
+    position: absolute;
+    top: 88%;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+#homeImage {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    opacity: 0.8;
+    margin: 0px;
+}
+
+#titlehead h1 {
+    margin-top: 5px
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+td {
+    margin: 10px;
+    padding: 2px;
+}
+
+#formButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(240, 240, 240);
+    border: 5px solid lightgray;
+    border-radius: 25px;
+    padding: 15px;
+    width: auto;
+    box-shadow: -15px 15px 00px rgba(100, 100, 100, 1);
+    /* Optional: Box shadow for a subtle effect */
+}
+
+.container1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(240, 240, 240);
+    border-radius: 25px;
+    padding: 9px;
+    width: auto;
+    box-shadow: -15px 15px 10px rgba(0, 0, 0, 1);
+    /* Optional: Box shadow for a subtle effect */
+}
+
+.button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(235, 235, 235);
+    border-width: thin;
+    border-radius: 5px;
+    color: black;
+    padding: 2px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+#nelson {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nelson:active {
+    filter: opacity(90%);
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+#jokeSection {
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: black;
+}

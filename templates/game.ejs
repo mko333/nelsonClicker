@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clicker</title>
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+</head>
+
+<body>
+    <div>
+        <h3>
+            Click Nelson! We will store how many clicks you have in MongoDB. This number saves between sessions. View
+            the <a href="/leaderboard">Leaderboard</a> to see the top 5 users with the most clicks! Make sure to click
+            the SAVE PROGRESS button to save your clicks :)<br>
+            <button id="save">Save Progress</button>
+        </h3>
+        <h1 id="count">
+            <%= userClicks %>
+        </h1>
+        <input type="image" src="/images/nelson.png" id="nelson">
+        <script>
+            let b = document.getElementById("nelson");
+            let countElement = document.getElementById("count");
+            let count = parseInt(countElement.textContent);
+
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get("username"); // Get the username query parameter
+
+            b.addEventListener("click", () => {
+                count++; // Increment the count
+                countElement.textContent = count; // Update the text in the <h1>
+            });
+
+            const save = document.getElementById('save');
+            save.addEventListener("click", async _ => {
+                try {
+                    const response = await fetch('/update', {
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            username: name,
+                            clicks: count
+                        })
+                    });
+                    console.log('Completed!', response);
+                } catch (err) {
+                    console.error(`Error: ${err}`);
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

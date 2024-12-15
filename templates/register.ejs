@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/style.css" type="text/css">
+</head>
+
+<body>
+    <img id="homeImage" src="/images/nelson.png" alt="nelson">
+    <div class="container">
+        <div id="titlehead">
+            <h1>Create an Account</h1>
+        </div>
+
+        <form action="/new" method="post"
+            onsubmit="confirm('Are you sure your information is correct? This action cannot be undone.')">
+            <table>
+                <tr>
+                    <td>New Username:</td>
+                    <td><input type="text" name="name" id="name" placeholder="someone@something.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New Password:</td>
+                    <td><input type="password" name="password" id="password" placeholder="password" required></td>
+                </tr>
+
+            </table>
+            <span style="color: red;">
+                <%= error %>
+            </span>
+            <div id="formButtons">
+                <table>
+
+                    <tr>
+                        <td><input type="submit" value="Create Account"></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    </form>
+
+    <div class="centered" id="introText">
+        <p>
+            Create an account above. You can't use duplicate usernames.
+        </p>
+    </div>
+</body>
+
+</html>
